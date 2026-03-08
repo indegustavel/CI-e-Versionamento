@@ -1,0 +1,26 @@
+name: Meu Primeiro CI
+
+# 1. QUANDO isso vai rodar? (Toda vez que fizermos um 'push' pro GitHub)
+on: [push]
+
+jobs:
+  testar-codigo:
+    # 2. ONDE isso vai rodar? (Numa máquina virtual Linux/Ubuntu emprestada pelo GitHub)
+    runs-on: ubuntu-latest
+
+    steps:
+      # 3. PASSO A PASSO DO QUE FAZER:
+
+      - name: Pegar os arquivos do repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11' # Pode ser a versão que você estiver usando
+
+      - name: Instalar o Pytest
+        run: pip install pytest
+
+      - name: Executar os testes!
+        run: pytest
