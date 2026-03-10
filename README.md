@@ -26,3 +26,5 @@ Repositório simples para estudos de integração contínua e versionamento.
 ## Objetivo
 
 Servir como exemplo básico para praticar versionamento com Git e execução de testes automatizados.
+
+# TESTE PARA MERGE
