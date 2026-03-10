@@ -1,2 +1,2 @@
-def somar(a, b):
-    return a + b
+def substracao(a, b):
+    return a - b
